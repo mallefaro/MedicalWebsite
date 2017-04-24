@@ -1,0 +1,24 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+.mainheader{
+    display: block;
+    background: dodgerblue;
+    height: 120px;
+
+}
+.mainheader h1{
+    font-style: inherit;
+    font-family: "Berlin Sans FB";
+    font-size: 40px;
+    color: bisque;
+}
+.topbar{
+    background: greenyellow;
+    padding-left: 0px;
+}
+.rightbar
+{
+    background: dodgerblue;
+    margin-left: 0px;
+}
+
