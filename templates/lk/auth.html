@@ -17,7 +17,7 @@
                 <div class="col-lg-12">
                     <span style="color: white; font-size: 30px">
                         There are will be good image
-                        {% if username %}
+                        {% if email %}
                             <li><h2>Hello</h2></li>
                         {% endif %}
                     </span>
@@ -45,16 +45,16 @@
         <div class="col-lg-8 col-lg-offset-2">
             <div class="topbar" style="background: greenyellow">
                 <h2>Alabamka is top spell howler</h2>
-                <form method="post">
+                <form action="/lk/" method="post">
+                    {% csrf_token %}
                     <input type="text" id="username" placeholder="username">
                     <br>
                     <br>
                     <input type="password" id="password" placeholder="password">
                     <br><br>
                     <input type="submit" value="Enter">
-                    <br>
-                    <a href={% url 'registration'%}>Registration</a>
                 </form>
+                <a href={% url 'registration'%}>Registration</a>
             </div>
         </div>
     </div>
