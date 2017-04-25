@@ -44,7 +44,7 @@ class BaseCustomUser(AbstractBaseUser, PermissionsMixin):
     phone_number = models.CharField(_('phone number'), max_length=16, blank=True,
                                     validators=[validators.RegexValidator(
                                         r'^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$')])
-    birthday = models.DateTimeField(_('birthday'), default='timezone.now()')
+    birthday = models.DateField(_('birthday'))
     address = models.CharField(_('address'), max_length=100, blank=True)
     is_staff = models.BooleanField(_('staff status'), default=False,
                                    help_text=_('Designates whether the user can log into this admin site.'))
@@ -59,8 +59,8 @@ class BaseCustomUser(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = ['username']
 
     class Meta:
-        verbose_name = _('user')
-        verbose_name_plural = _('users')
+        verbose_name = _('Пользователь')
+        verbose_name_plural = _('Пользователи')
         abstract = False
 
     def get_full_name(self):

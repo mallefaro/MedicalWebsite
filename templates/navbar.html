@@ -1,6 +1,9 @@
 <div class="container">
     <div class="row">
         <div class="collapse navbar-collapse col-lg-offset-5" id="bs-example-navbar-collapse-1">
+            {% if request.user.is_authenticated %}
+                <h4><a href="/lk/logout/">{{ request.user.first_name}} {{request.user.last_name}} Хочет Выйти</a> </h4>
+            {% endif %}
             <ul class="nav navbar-nav">
                 <li><a href={% url 'mainPage' %}>Главная</a></li>
                 <li><a href="#">Врачи</a></li>

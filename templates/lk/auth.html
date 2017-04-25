@@ -1,5 +1,4 @@
 {% load staticfiles %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,12 +44,9 @@
         <div class="col-lg-8 col-lg-offset-2">
             <div class="topbar" style="background: greenyellow">
                 <h2>Alabamka is top spell howler</h2>
-                <form action="/lk/" method="post">
+                <form action="/lk/account/" method="POST">
                     {% csrf_token %}
-                    <input type="text" id="username" placeholder="username">
-                    <br>
-                    <br>
-                    <input type="password" id="password" placeholder="password">
+                    {{ form_auth.as_p }}
                     <br><br>
                     <input type="submit" value="Enter">
                 </form>

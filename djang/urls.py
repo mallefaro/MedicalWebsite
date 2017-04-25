@@ -20,5 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^registration/?', include('lk.urls')),
     url(r'^lk/', include('lk.urls')),
-    url(r'^$', include('mainPage.urls'))
+    url(r'^', include('mainPage.urls'))
 ]

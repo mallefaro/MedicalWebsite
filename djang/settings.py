@@ -29,7 +29,9 @@ ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'userProfile.BaseCustomUser'
 # Application definition
-
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+)
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
     'userProfile.apps.UserprofileConfig',
     'lk',
     'mainPage',
+    'article',
 ]
 
 MIDDLEWARE = [
