@@ -1,46 +1,9 @@
+{% extends 'base.html' %}
 {% load staticfiles %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <link rel="stylesheet" href="{%  static 'main/style.css' %}">
-    <title>Test landing</title>
-</head>
-<body>
-<div class="mainheader">
+{% block content %}
+    {% include 'navbar.html' %}
     <div class="container">
-        <div class="row">
-                <div class="col-lg-12">
-                    <span style="color: white; font-size: 30px">
-                        There are will be good image
-                        {% if username %}
-                            <li><a href="auth/logout"> ({{username}}) Выйти</a></li>
-                        {% endif %}
-                    </span>
-                </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="collapse navbar-collapse col-lg-offset-5" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href={% url 'mainPage' %}>Главная</a></li>
-                <li><a href="#">Врачи</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Цены</a></li>
-                <li><a href="#">Личный кабинет</a></a> </li>
-                <li><a href="#">О клинике</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
- <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <div class="topbar" style="background: greenyellow">
@@ -57,6 +20,5 @@
                 </div>
             </div>
         </div>
-</div>
-</body>
-</html>
+    </div>
+{% endblock %}
